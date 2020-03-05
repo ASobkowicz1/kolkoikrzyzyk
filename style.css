@@ -1,0 +1,45 @@
+body{
+    text-align:center;
+    font-family: 'Varela Round', sans-serif;
+    background: linear-gradient(to right, #fdfc47, #24fe41);
+}
+h1{
+    font-size: 3rem;
+    margin: 20px auto 10px auto;
+}
+h2.ktozaczyna{
+    font-size: 1.5rem;
+    display:none;
+}
+.plansza{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.gamearea{
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+}
+.row{
+    display: flex;
+    justify-content: start;
+}
+button{
+    border: 2px solid black;
+    border-radius: 50px; 
+    background-color: #24fe41;
+    font-size: 2rem;
+    font-family: 'Varela Round', sans-serif;
+}
+.startbtn {
+    margin-top: 30px;
+    width: 200px;
+    height: 100px;
+}
+.starto, .startx {
+    width: 100px;
+    height: 50px;
+    display: none;
+}
