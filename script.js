@@ -74,12 +74,13 @@ starto.addEventListener('click', function(){
 });
 for(let i = 0; i < plansza.length; i++){
     plansza[i].html.addEventListener('click', function(){
+        if(!gameisOver){
         ruchgracza(i);
-        checkwinner();
+        checkwinner();}
     });
 };
 function ruchgracza(i){
-    if(plansza[i].html.style.backgroundImage === "" && !gameisOver){
+    if(plansza[i].html.style.backgroundImage === ""){
         if(actualplayer === 'x'){
             plansza[i].html.style.backgroundImage = "url('x.png')";
             plansza[i].ownedBy = 'x';
@@ -103,7 +104,7 @@ function checkwinner(){
         (plansza[2].ownedBy !== '' && plansza[2].ownedBy === plansza[4].ownedBy && plansza[2].ownedBy === plansza[6].ownedBy)){
             gameisOver = true
             actualplayer === 'x' ? actualplayer = 'o' : actualplayer = 'x';
-            setTimeout(function(){ alert('Gracz '+ actualplayer.toUpperCase() + ' wygrał!'); }, 200);
+            setTimeout(function(){ alert('Gracz '+ actualplayer.toUpperCase() + ' wygrał!'); }, 100);
     }
 };
 
